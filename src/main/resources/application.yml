@@ -1,0 +1,51 @@
+spring:
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: false # we use webpack for livereload
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+    name:
+    username: root
+    password: 6391303
+    druid:
+      connectionProperties: config.decrypt=false # database connection plain password
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: MYSQL
+    show_sql: true
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+  #security:
+      #user:
+        #name: guest
+        #password: 123
+        #roles: admin
+
+server:
+  port: 8004
+
+### xxl-job admin address list, such as "http://address" or "http://address01,http://address02"
+xxl:
+  job:
+    admin:
+      addresses: http://127.0.0.1:8080/xxl-job-admin
+  ### xxl-job, access token
+    accessToken:
+    executor:
+      ### xxl-job executor appname
+      appname: demo
+      ### xxl-job executor registry-address: default use address to registry , otherwise use ip:port if address is null
+      address:
+      ### xxl-job executor server-info
+      ip:
+      port: 9997
+      ### xxl-job executor log-path
+      logpath: /data/applogs/xxl-job/jobhandler
+      ### xxl-job executor log-retention-days
+      logretentiondays: 30
+
+
