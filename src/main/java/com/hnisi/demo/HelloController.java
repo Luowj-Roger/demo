@@ -10,7 +10,6 @@ public class HelloController {
 
     @RequestMapping("/hello1")
     public String hello(){
-        Vector v = new Vector();
         return "bbb";
     }
 }
