@@ -1,4 +1,4 @@
-package com.hnisi.demo.test.anonymous;
+package com.hnisi.Roger.demo.test.anonymous;
 
 public class AmProtectedClasses {
     protected void test(){

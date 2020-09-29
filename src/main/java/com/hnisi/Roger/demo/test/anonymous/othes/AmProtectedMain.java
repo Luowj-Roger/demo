@@ -1,6 +1,6 @@
-package com.hnisi.demo.test.anonymous.othes;
+package com.hnisi.Roger.demo.test.anonymous.othes;
 
-import com.hnisi.demo.test.anonymous.AmProtectedClasses;
+import com.hnisi.Roger.demo.test.anonymous.AmProtectedClasses;
 
 public class AmProtectedMain {
     public static void main(String[] args){

@@ -1,15 +1,14 @@
-package com.hnisi.demo;
+package com.hnisi.Roger.demo;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Vector;
-
 @RestController
-public class HelloController {
+public class Hello2Controller {
 
-    @RequestMapping("/hello1")
+    @RequestMapping("/hello2")
     public String hello(){
-        return "cccc";
+
+        return "ccc";
     }
 }

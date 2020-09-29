@@ -1,4 +1,4 @@
-package com.hnisi.demo.test.thread;
+package com.hnisi.Roger.demo.test.thread;
 
 public class TreadTest {
     public static void main(String[] args) {

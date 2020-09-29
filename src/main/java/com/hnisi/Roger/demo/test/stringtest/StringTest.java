@@ -1,4 +1,4 @@
-package com.hnisi.demo.test.stringtest;
+package com.hnisi.Roger.demo.test.stringtest;
 
 public class StringTest {
     /**
