@@ -149,9 +149,18 @@ public class RedisResource {
      * 删除count个key的list中值为value的元素
      * @param
      */
-    @RequestMapping(value = "/deleteValue/{key}/{count}/{value}", method = RequestMethod.GET)
-    public void deleteValue(@PathVariable("key") String key,@PathVariable("count") int count,@PathVariable("value") String value) {
-        redisListService.deleteValue(key,count,value);
+    @RequestMapping(value = "/deleteValue/{key}/{count}/{value}", method = RequestMethod.POST)
+    public Long deleteValue(@PathVariable("key") String key,@PathVariable("count") int count,@PathVariable("value") String value) {
+        return  redisListService.deleteValue(key,count,value);
+    }
+
+    /**
+     * 返回并删除名称为srckey的list的尾元素，并将该元素添加到名称为dstkey的list的头部
+     * @param
+     */
+    @RequestMapping(value = "/deleteValue/{srckey}/{dstkey}", method = RequestMethod.POST)
+    public String rPopPush(@PathVariable("srckey") String srckey,@PathVariable("dstkey") String dstkey) {
+        return  redisListService.rPopPush(srckey,dstkey);
     }
 
     /******************** List 类型操做 end*****************************/

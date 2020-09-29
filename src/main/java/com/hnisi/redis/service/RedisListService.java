@@ -94,7 +94,18 @@ public class RedisListService {
      * @param count
      * @param value
      */
-    public void deleteValue(String key,int count,String value){
-        redisTemplate.opsForList().remove(key,count,value);
+    public long deleteValue(String key,int count,String value){
+        Object num =  redisTemplate.opsForList().remove(key,count,value);
+        return  value!=null?(Long)num:0;
+    }
+
+    /**
+     * 返回并删除名称为srckey的list的尾元素，并将该元素添加到名称为dstkey的list的头部
+     * @param srckey
+     * @param dstkey
+     */
+    public String  rPopPush(String srckey,String dstkey){
+        Object value =  redisTemplate.opsForList().rightPopAndLeftPush(srckey,dstkey);
+        return  value!=null?value.toString():"";
     }
 }
