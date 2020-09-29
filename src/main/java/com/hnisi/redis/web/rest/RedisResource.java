@@ -4,6 +4,7 @@ package com.hnisi.redis.web.rest;
 import com.hnisi.account.user.domain.SUser;
 import com.hnisi.redis.domain.MapsKey;
 import com.hnisi.redis.domain.StringKey;
+import com.hnisi.redis.service.RedisListService;
 import com.hnisi.redis.service.RedisMapService;
 import com.hnisi.redis.service.RedisStringService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,9 @@ public class RedisResource {
 
     @Autowired
     private RedisMapService redisMapService;
+
+    @Autowired
+    private RedisListService redisListService;
 
     /******************** String 类型操做 begin*****************************/
     @RequestMapping(value = "/setUser/{key}", method = RequestMethod.POST)
@@ -102,4 +106,53 @@ public class RedisResource {
     }
 
     /******************** Map 类型操做 end*****************************/
+
+    /******************** List 类型操做 begin*****************************/
+    /**
+     * 插入list
+     * @param
+     */
+    @RequestMapping(value = "/pushList/{type}/{key}", method = RequestMethod.POST)
+    public void pushList(@PathVariable("type") String type,@PathVariable("key") String key,@RequestBody List<String> list) {
+        if("r".equalsIgnoreCase(type)){
+            redisListService.rPushList(key,list);
+        }else if("l".equalsIgnoreCase(type)){
+            redisListService.lPushList(key,list);
+        }
+    }
+
+    /**
+     * 插入list
+     * @param
+     */
+    @RequestMapping(value = "/popList/{type}/{key}", method = RequestMethod.GET)
+    //@RequestParam("type") String type,@RequestParam(value ="keyd" ,required = false) String key
+    public String popList(@PathVariable("type") String type,@PathVariable("key") String key) {
+        if("r".equalsIgnoreCase(type)){
+           return redisListService.rPopList(key);
+        }else if("l".equalsIgnoreCase(type)){
+            return redisListService.lPopList(key);
+        }
+        return "";
+    }
+
+    /**
+     * 插入list
+     * @param
+     */
+    @RequestMapping(value = "/getAllList/{key}", method = RequestMethod.GET)
+    public List getAllList(@PathVariable("key") String key) {
+        return redisListService.getAllList(key);
+    }
+
+    /**
+     * 删除count个key的list中值为value的元素
+     * @param
+     */
+    @RequestMapping(value = "/deleteValue/{key}/{count}/{value}", method = RequestMethod.GET)
+    public void deleteValue(@PathVariable("key") String key,@PathVariable("count") int count,@PathVariable("value") String value) {
+        redisListService.deleteValue(key,count,value);
+    }
+
+    /******************** List 类型操做 end*****************************/
 }
