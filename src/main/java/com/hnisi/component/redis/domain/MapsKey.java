@@ -1,4 +1,4 @@
-package com.hnisi.redis.domain;
+package com.hnisi.component.redis.domain;
 
 /**
  * map实体类

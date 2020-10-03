@@ -1,4 +1,4 @@
-package com.hnisi.redis.service;
+package com.hnisi.component.redis.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

@@ -1,6 +1,6 @@
-package com.hnisi.redis.service;
+package com.hnisi.component.redis.service;
 
-import com.hnisi.redis.domain.MapsKey;
+import com.hnisi.component.redis.domain.MapsKey;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;

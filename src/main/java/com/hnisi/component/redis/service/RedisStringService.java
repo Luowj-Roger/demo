@@ -1,7 +1,7 @@
-package com.hnisi.redis.service;
+package com.hnisi.component.redis.service;
 
-import com.hnisi.account.user.domain.SUser;
-import com.hnisi.redis.domain.StringKey;
+import com.hnisi.common.account.user.domain.SUser;
+import com.hnisi.component.redis.domain.StringKey;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
