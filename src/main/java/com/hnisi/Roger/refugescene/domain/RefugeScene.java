@@ -97,6 +97,18 @@ public class RefugeScene implements Serializable {
     private String dlwzzb;
 
     /**
+     * 经度
+     */
+    @Column(name = "longitude")
+    private String longitude;
+
+    /**
+     * 纬度
+     */
+    @Column(name = "latitude")
+    private String latitude;
+
+    /**
      * 天地图坐标
      */
     @Column(name = "tdtzb")
@@ -425,6 +437,22 @@ public class RefugeScene implements Serializable {
      */
     public String getDlwzzb() {
         return this.dlwzzb;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
     }
 
     public String getTdtzb() {
