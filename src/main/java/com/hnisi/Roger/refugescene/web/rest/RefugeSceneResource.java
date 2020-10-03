@@ -1,7 +1,7 @@
-package com.hnisi.roger.refugescene.web.rest;
+package com.hnisi.Roger.refugescene.web.rest;
 
-import com.hnisi.redis.domain.GeoCriteria;
-import com.hnisi.redis.service.RedisGeoService;
+import com.hnisi.component.redis.domain.GeoCriteria;
+import com.hnisi.component.redis.service.RedisGeoService;
 import com.hnisi.roger.refugescene.domain.RefugeScene;
 import com.hnisi.roger.refugescene.service.RefugeSceneService;
 import org.springframework.beans.factory.annotation.Autowired;

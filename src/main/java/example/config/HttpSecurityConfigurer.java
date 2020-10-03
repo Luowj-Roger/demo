@@ -1,6 +1,6 @@
 package example.config;
 
-import com.hnisi.security.authentication.userdetails.SGUserDetailsServiceImpl;
+import com.hnisi.common.security.authentication.userdetails.SGUserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

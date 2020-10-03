@@ -1,6 +1,5 @@
 package com.hnisi.roger.refugescene.repostiory;
 
-import com.hnisi.account.user.domain.SUser;
 import com.hnisi.roger.refugescene.domain.RefugeScene;
 import org.springframework.data.jpa.repository.JpaRepository;
 

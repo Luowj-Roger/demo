@@ -1,14 +1,12 @@
-package com.hnisi.account.user.domain;
+package com.hnisi.common.account.user.domain;
 
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.UUID;
 
 @Entity
 @Table(name = "s_user")

@@ -1,7 +1,7 @@
-package com.hnisi.security.authentication.userdetails;
+package com.hnisi.common.security.authentication.userdetails;
 
-import com.hnisi.account.user.domain.SUser;
-import com.hnisi.account.user.service.SUserService;
+import com.hnisi.common.account.user.domain.SUser;
+import com.hnisi.common.account.user.service.SUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
@@ -9,7 +9,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,4 +1,4 @@
-package com.hnisi.xxljob.executor.jobhandler;
+package com.hnisi.component.xxljob.executor.jobhandler;
 
 import com.xxl.job.core.biz.model.ReturnT;
 import com.xxl.job.core.handler.annotation.XxlJob;
