@@ -19,6 +19,10 @@ spring:
     database: 0
     host: localhost
     port: 6379
+  data:
+    # Elasticsearch 配置项
+    elasticsearch:
+      uris: 127.0.0.1:9200 # 集群节点
   #security:
       #user:
         #name: guest
