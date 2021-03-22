@@ -1,4 +1,4 @@
-package example.config;
+package com.hnisi.config;
 
 import com.hnisi.common.security.authentication.userdetails.SGUserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +35,7 @@ public class HttpSecurityConfigurer extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/hello").permitAll()
+                .antMatchers("/hello2").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
